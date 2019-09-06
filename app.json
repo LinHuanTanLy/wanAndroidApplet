@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/system/system",
+    "pages/article/article",
+    "pages/projectsList/projectsList"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imgs/icon_un_index.png",
+        "selectedIconPath": "imgs/icon_is_index.png"
+      },
+      {
+        "pagePath": "pages/system/system",
+        "text": "体系",
+        "iconPath": "imgs/icon_un_system.png",
+        "selectedIconPath": "imgs/icon_is_system.png"
+      },
+      {
+        "pagePath": "pages/article/article",
+        "text": "我的",
+        "iconPath": "imgs/icon_un_mine.png",
+        "selectedIconPath": "imgs/icon_is_mine.png"
+      }
+    ]
+  }
+}

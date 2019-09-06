@@ -1,0 +1,70 @@
+<view class="container">
+  <scroll-view>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swper-container">
+      <block wx:for="{{bannerList}}" wx:key="*this.item">
+        <swiper-item>
+          <image src="{{item.imagePath}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="article-title-container" bindtap="toProjectsList" data-proId="">
+      <image src="../../imgs/projects.png" class="article-icon" />
+      <text class="article-title">项目列表</text>
+      <image class="article-more" src="../../imgs/right_arrow.png"></image>
+    </view>
+    <view class="divLine" />
+    <view class="article-container">
+      <view class='gridview'>
+        <block wx:for="{{projectsTree}}" wx:for-index="idx" wx:key="key" >
+          <view class='gridview-item' bindtap="toProjectsList" data-proId="">
+            <image src="{{projectsIcons[idx]}}" class="gridview-item-img"></image>
+            <text class="gridview-item-text">{{item.name}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="article-title-container">
+      <image src="../../imgs/wechat_public.png" class="article-icon" />
+      <text class="article-title">公众号列表</text>
+      <image class="article-more" src="../../imgs/right_arrow.png"></image>
+    </view>
+    <!-- <view class='gridview'>-->
+    <!-- <view class="wx-author-container">
+     
+    </view> -->
+    <!-- </view> -->
+    <view class="wx-author-container">
+      <view class='gridview'>
+        <block wx:for="{{wxAuthorList}}" wx:key="key">
+          <text class="wx-author-item">{{item.name}}</text>
+        </block>
+      </view>
+    </view>
+    <view class="article-title-container">
+      <image src="../../imgs/fire.png" class="article-icon" />
+      <text class="article-title">置顶文章</text>
+      <image class="article-more" src="../../imgs/right_arrow.png"></image>
+    </view>
+    <view class="divLine" />
+    <view class="hot-container">
+      <block wx:for="{{hotActicleList}}" wx:key="key">
+        <view class="hot-item-container">
+          <view class="hot-item-title-container">
+            <image src="../../imgs/author_pic12.jpg" class="hot-item-author-pic" />
+            <view class="hot-item-title-right-container">
+              <text class="hot-item-author-name">{{item.author}}</text>
+              <text class="hot-item-chapter-name">{{item.chapterName}} / {{item.superChapterName}}  ·  {{item.niceDate}}</text>
+            </view>
+          </view>
+          <text class="hot-item-title">{{item.title}}</text>
+          <view class="hot-item-like-container">
+            <image class="hot-item-like" src="../../imgs/icon_like.png"></image>
+            <text class="hot-item-like-num">{{item.zan}}</text>
+          </view>
+          <view class="divLine"></view>
+        </view>
+
+      </block>
+    </view>
+  </scroll-view>
+</view>
